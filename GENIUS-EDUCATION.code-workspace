@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../genius"
+		},
+		{
+			"path": "../../genius/genius-education"
+		},
+		{
+			"path": "../../beauty"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "GENIUS-EDUCATION"
+	}
+}
