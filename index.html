@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="header">
        <div class="container">
        <div class="header-container">
         <nav class="header-nav">
@@ -70,22 +70,30 @@
         </section>
         <section class="section" id="chefs-section">
            <div class="container">
-            <h2 class="chefs-tittle section-tittle">Наші найкращі <span class="accent">шеф-кухарі</span></h2>
-            <ul>
-                <li>
-                    <article>
-                        <h3 class="chef-title">Настя</h3>
-                        <p>Привіт, я Настя!</p>
-                        <p>Вже 10 років, я свтілюю у життя цікаві та смачні ідеї.</p>
-                        <p>Я випічу для вас beautiful </p>
+            <h2 class="chefs-tittle section-tittle centered">Наші найкращі <span class="accent">шеф-кухарі</span></h2>
+            <ul class="chefs-list">
+                <li class="chefs-item"> 
+                    <article class="chef-card">
+                        <img class="chef-photo" src="images/woman1561.jpg" alt="nastya">
+                        <div>
+                                <h3 class="chef-title">Настя</h3>
+                               <div class="chef-text">
+                                <p>Привіт, я Настя!</p>
+                                <p>Вже 10 років, я свтілюю <br>у життя цікаві та смачні ідеї.</p>
+                                <p>Я випічу для вас beautiful </p>
+                               </div>
+                        </div>
                     </article>
                 </li>
                 <li>
-                    <article>
-                        <h3 class="chef-title">Влад</h3>
-                        <p>Привіт, я Настя!</p>
-                        <p>Вже 10 років, я свтілюю у життя цікаві та смачні ідеї.</p>
-                        <p>Я випічу для вас beautiful</p>
+                    <article class="chef-card">
+                        <img class="chef-photo" src="images/Mask group.png" alt="vlad">
+                        <div>
+                            <h3 class="chef-title">Влад</h3>
+                            <p class="chef-text">Привіт, я Влад!</p>
+                            <p class="chef-text">Мій кодитерський стаж вже 18 років. <br>SHOP BEKERY - це наша любов, з якою<br> ми ділимось кожен раз з Вами через нашу випічку!</p>
+                            <p class="chef-text">Я зроблю для вас унікальну начинку на будь який смак!</p>
+                        </div>
                     </article>
                 </li>
             </ul>
@@ -93,85 +101,99 @@
         </section>
         <section class="section" id="formats-section">
             <div class="container">
-                <h2 class="formats-title section-tittle ">Формати</h2>
-                <ul class="formats-list">
-                    <li class="formats-item">
-                        <article class="format-card">
-                            <h3 class="format-title">Warlus</h3>
-                            <div class="format-text">
-                                <p>Площа: до 15 м2</p>
-                                <p>Меню: найпопулярніші позиції меню</p>
-                                <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
-                                <p>Посадкові місця: відсутні</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="formats-item">
-                        <article class="format-card">
-                            <h3 class="format-title">Warlus</h3>
-                            <div class="format-text">
-                                <p>Площа: до 15 м2</p>
-                                <p>Меню: найпопулярніші позиції меню</p>
-                                <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
-                                <p>Посадкові місця: відсутні</p>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="formats-item"> 
-                        <article class="format-card">
-                            <h3 class="format-title">Warlus</h3>
-                            <div class="format-text">
-                                <p>Площа: до 15 м2</p>
-                                <p>Меню: найпопулярніші позиції меню</p>
-                                <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
-                                <p>Посадкові місця: відсутні</p>
-                            </div>
-                        </article>
-                    </li>
+                <h2 class="formats-title section-title centered">Формати</h2>
+                 <div class="formats-container">
+                    <ul class="formats-list">
+                        <li class="formats-item">
+                            <article class="format-card">
+                                <h3 class="format-title">Warlus</h3>
+                                <div class="format-text">
+                                    <p>Площа: до 15 м2</p>
+                                    <p>Меню: найпопулярніші позиції меню</p>
+                                    <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
+                                    <p>Посадкові місця: відсутні</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="formats-item">
+                            <article class="format-card">
+                                <h3 class="format-title">Warlus</h3>
+                                <div class="format-text">
+                                    <p>Площа: до 15 м2</p>
+                                    <p>Меню: найпопулярніші позиції меню</p>
+                                    <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
+                                    <p>Посадкові місця: відсутні</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="formats-item">
+                            <article class="format-card">
+                                <h3 class="format-title">Warlus</h3>
+                                <div class="format-text">
+                                    <p>Площа: до 15 м2</p>
+                                    <p>Меню: найпопулярніші позиції меню</p>
+                                    <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
+                                    <p>Посадкові місця: відсутні</p>
+                                </div>
+                            </article>
+                        </li>
+                 </div>
             </div>
         </section>
         </ul>
-        <section>
+        <section class="contact-section section" id="contact-section">
             <div class="container">
+             <div class="contact-container">
+                <div class="contact-form">
                 <h2 class="contact-title section-tittle">Приєднуйтеся до мережі пекарень
                 </h2>
-                <p>Заповни форму, щоб ми звʼязались з тобою!</p>
+                <p>Заповни форму, щоб ми звʼязались з тобою!</p>  
+                  <!-- form -->
+                </div>
                 <iframe
+                 class="contact-map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1634470361514!2d30.488698376675472!3d50.456680986915046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1764701830665!5m2!1suk!2sua"
                     width="603" height="595" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+               </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
      <div class="container">
-        <nav>
-            <a href="">
-                <img src="./images/logo.svg" alt="logotype">
-            </a>
-            <ul>
-                <li><span><a class="link" href="#">Наші традиції</a></span></li>
-                <li><a class="link" href="#">Щеф-кухар</a></li>
-                <li><a class="link" href="#">Формати</a></li>
-                <li><a class="link" href="#">Контакти</a></li>
-            </ul>
-        </nav>
-        <address>
-            <ul>
-                <li><a class="adrees-link" href="">38 (096) 000 00 07</a></li>
-                <li><a class="adrees-link" href="">shopbakery@gmail.com</a></li>
-                <li><a class="adrees-link" href="">країна, м. Київ,
-                        вул. Січових Стрільців 54</a></li>
-                <li>
-                    <a href="#"></a>
-                </li>
-                <li>
-                    <a href="#"></a>
-                </li>
-            </ul>
-            <a class="adress-link" href="#">Політика конфіденційності</a>
-            <p class="addres-copyright">© 2022 Дані захищені</p>
-        </address>
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <div class="footer-logo">
+                    <a href="#" class="footer-logo">
+                        <img src="./images/logo.svg" alt="logotype">
+                    </a>
+                </div>
+                <ul class="footer-menu">
+                    <li><span><a class="link" href="#">Наші традиції</a></span></li>
+                    <li><a class="link" href="#">Щеф-кухар</a></li>
+                    <li><a class="link" href="#">Формати</a></li>
+                    <li><a class="link" href="#">Контакти</a></li>
+                </ul>
+            </nav>
+            <address class="footer-address">
+                <ul class="address-list">
+                    <li><a class="address-link" href="">38 (096) 000 00 07</a></li>
+                    <li><a class="address-link" href="">shopbakery@gmail.com</a></li>
+                    <li><a class="address-link" href="">країна, м. Київ,
+                            вул. Січових Стрільців 54</a></li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+                <div class="address-info">
+                    <a class="address-link" href="#">Політика конфіденційності</a>
+                    <p class="addres-copyright">© 2022 Дані захищені</p>
+                </div>
+            </address>
+        </div>
      </div>
     </footer>
 </body>
