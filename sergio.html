@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Привіт, Сергій 👋</title>
+
+    <style>
+        :root {
+            --bg: #0b1220;
+            --card: rgba(255, 255, 255, 0.08);
+            --stroke: rgba(255, 255, 255, 0.14);
+            --text: rgba(255, 255, 255, 0.92);
+            --muted: rgba(255, 255, 255, 0.68);
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+            --radius: 24px;
+            --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+            "Segoe UI Emoji";
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: var(--sans);
+            color: var(--text);
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            background:
+                    radial-gradient(1000px 600px at 20% 20%, rgba(255, 90, 90, 0.18), transparent 60%),
+                    radial-gradient(900px 700px at 80% 30%, rgba(90, 170, 255, 0.18), transparent 60%),
+                    radial-gradient(900px 700px at 50% 90%, rgba(170, 90, 255, 0.16), transparent 60%),
+                    linear-gradient(180deg, #060a12, var(--bg));
+        }
+
+        .wrap {
+            width: min(920px, 92vw);
+            padding: 28px;
+            position: relative;
+        }
+
+        .card {
+            position: relative;
+            border: 1px solid var(--stroke);
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px;
+            backdrop-filter: blur(14px);
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: conic-gradient(
+                    from 210deg,
+                    rgba(255, 90, 90, 0.55),
+                    rgba(90, 170, 255, 0.55),
+                    rgba(170, 90, 255, 0.55),
+                    rgba(255, 90, 90, 0.55)
+            );
+            filter: blur(24px);
+            opacity: 0.35;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 16px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px dashed rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.12);
+            font-family: var(--mono);
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(120, 255, 170, 0.95);
+            box-shadow: 0 0 0 6px rgba(120, 255, 170, 0.12);
+            animation: pulse 1.6s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.75; }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(26px, 3.4vw, 44px);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+        }
+
+        .line {
+            display: inline-block;
+            padding: 0 6px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        p {
+            margin: 0;
+            font-size: clamp(15px, 2vw, 18px);
+            line-height: 1.5;
+            color: var(--muted);
+        }
+
+        .terminal {
+            margin-top: 8px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        .terminal__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            font-family: var(--mono);
+        }
+
+        .lights {
+            display: inline-flex;
+            gap: 8px;
+        }
+        .lights span {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            display: inline-block;
+            opacity: 0.9;
+        }
+        .lights span:nth-child(1){ background: rgba(255, 100, 100, 0.95); }
+        .lights span:nth-child(2){ background: rgba(255, 210, 100, 0.95); }
+        .lights span:nth-child(3){ background: rgba(120, 255, 170, 0.95); }
+
+        .terminal__body {
+            padding: 14px 16px 18px;
+            font-family: var(--mono);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.86);
+        }
+
+        .cmd { color: rgba(120, 255, 170, 0.95); }
+        .hint { color: rgba(255, 255, 255, 0.65); }
+        .warn { color: rgba(255, 210, 100, 0.95); }
+        .fun { color: rgba(170, 150, 255, 0.95); }
+
+        .footer {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btn {
+            appearance: none;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            padding: 10px 14px;
+            border-radius: 14px;
+            cursor: pointer;
+            font-family: var(--sans);
+            font-weight: 650;
+            transition: transform .12s ease, background .12s ease, border-color .12s ease;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.28);
+            transform: translateY(-1px);
+        }
+
+        .btn:active { transform: translateY(0); }
+
+        .note {
+            font-family: var(--mono);
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.62);
+        }
+
+        .sticker {
+            position: absolute;
+            right: 18px;
+            top: -14px;
+            transform: rotate(6deg);
+            background: rgba(255, 255, 255, 0.92);
+            color: #0b1220;
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-family: var(--mono);
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+            user-select: none;
+        }
+
+        @media (max-width: 520px) {
+            .wrap { padding: 18px; }
+            .card { padding: 18px; }
+            .sticker { right: 12px; }
+            .footer { justify-content: flex-start; }
+        }
+    </style>
+</head>
+
+<body>
+<main class="wrap">
+    <div class="card">
+        <div class="sticker">git +1 🧠</div>
+
+        <div class="content">
+            <div class="badge">
+                <span class="dot"></span>
+                status: <span class="fun">SergiyUnlocked</span>
+            </div>
+
+            <h1>
+                <span class="line">Привіт, Сергій</span> 👋<br />
+                тепер ти знаєш більше про <span class="line">git</span>.
+            </h1>
+
+            <p>
+                Це той момент, коли <b>403</b> перетворюється на <b>OK</b>, а гілки — не тільки на деревах 😄
+            </p>
+
+            <section class="terminal" aria-label="terminal">
+                <div class="terminal__top">
+                    <span>terminal / wisdom.log</span>
+                    <span class="lights" aria-hidden="true"><span></span><span></span><span></span></span>
+                </div>
+                <div class="terminal__body">
+                    <div><span class="cmd">$</span> git status</div>
+                    <div class="hint">On branch <span class="fun">confidence</span></div>
+                    <div class="hint">nothing to commit, working tree clean ✨</div>
+                    <br />
+                    <div><span class="cmd">$</span> git pull</div>
+                    <div class="warn">Already up to date.</div>
+                    <div class="hint">А от ти — <span class="fun">updated</span> на +1 рівень 🎮</div>
+                </div>
+            </section>
+
+            <div class="footer">
+                <button class="btn" type="button" onclick="alert('Сергій: +1 до Git, +10 до спокою 😄')">
+                    Натисни для бонусу
+                </button>
+                <div class="note">P.S. Коміти — як жарти: краще коротко, але влучно.</div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
