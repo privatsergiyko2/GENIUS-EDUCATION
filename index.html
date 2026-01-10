@@ -70,7 +70,7 @@
         </section>
         <section class="section" id="chefs-section">
            <div class="container">
-            <h2 class="chefs-tittle section-tittle centered">Наші найкращі <span class="accent">шеф-кухарі</span></h2>
+            <h2 class="chefs-tittle section-tittle centered">Наші найкращі <span class="accent"><br>шеф-кухарі</span></h2>
             <ul class="chefs-list">
                 <li class="chefs-item"> 
                     <article class="chef-card">
@@ -196,5 +196,25 @@
         </div>
      </div>
     </footer>
+    <button id="open-modal">Відкрити модалку</button>
+    
+    <div class="backdrop" id="backdrop">
+        <div class="modal">
+            <button id="close-modal" class="button-modal">✖</button>
+            Модальне вікно
+        </div>
+    </div>
+    </div>
+    <script src="index.js">const backdrop = document.getElementById("backdrop");
+        const openBtn = document.getElementById("open-modal");
+        const closeBtn = document.getElementById("close-modal");
+
+        openBtn.addEventListener("click", () => {
+            backdrop.classList.add("is-open");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            backdrop.classList.remove("is-open");
+        });</script>
 </body>
 </html>

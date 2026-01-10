@@ -1,7 +1,11 @@
-console.log('heello world')
-console.log(document)
+const backdrop = document.getElementById("backdrop");
+const openBtn = document.getElementById("open-modal");
+const closeBtn = document.getElementById("close-modal");
 
-console.log('Hello from Stas 1234');
-console.log('Ahhdjahjfdhjsafhjsahjfdhjsafhjsdaf');
+openBtn.addEventListener("click", () => {
+  backdrop.classList.add("is-open");
+});
 
-console.log('Ahhdjahjfdhjsafffffffffffffffffffhjsafhjsdaf');
+closeBtn.addEventListener("click", () => {
+  backdrop.classList.remove("is-open");
+});
