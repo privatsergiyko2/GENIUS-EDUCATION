@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
     <!-- styles -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/scss/main.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
                 <li class="header-item"><a class="link" href="#">Контакти</a></li>
             </ul>
         </nav>
-        <button class="button">Замовити дзвінок</button>
+        <button class="button" id="order-call">Замовити дзвінок</button>
         </div>
        </div>
     </header>
@@ -148,7 +148,25 @@
                 <h2 class="contact-title section-tittle">Приєднуйтеся до мережі пекарень
                 </h2>
                 <p>Заповни форму, щоб ми звʼязались з тобою!</p>  
-                  <!-- form -->
+                <form name="contact-form" autocomplete="off">
+                    <div class="form-field">
+                        <label class="form-label visually-hidden" for="user-name">Ім'я</label>
+                        <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                        <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон">
+                    </div>
+                
+                    <div class="form-field">
+                        <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                        <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Електронна пошта">
+                    </div>
+                
+                    <button class="button form-button" type="submit">Замовити дзвінок</button>
+                    <p class="form-terms">Натискаючи на кнопку я погоджуюсь <a class="form-terms-link" href="#">з політикою
+                            конфіденційності</a></p>
+                </form>
                 </div>
                 <iframe
                  class="contact-map"
@@ -196,25 +214,35 @@
         </div>
      </div>
     </footer>
-    <button id="open-modal">Відкрити модалку</button>
+   
     
     <div class="backdrop" id="backdrop">
         <div class="modal">
             <button id="close-modal" class="button-modal">✖</button>
-            Модальне 
+            <h2 class="">Замовити дзвінок</h2>
+            <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+            <form name="mofal-form" autocomplete="off" novalidate>
+            <div class="form-field">
+                <label class="form-label visually-hidden" for="user-name">Ім'я</label>
+                <input class="form-input" type="text"  name="user-name" id="user-name" placeholder="Ім'я">
+            </div>
+            <div class="form-field">
+                <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                <input  class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон">
+            </div>
+
+            <div class="form-field">
+                <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                <input  class="form-input"  type="email" name="user-email" id="user-email" placeholder="Електронна пошта">
+            </div>
+
+                <button class="button form-button" type="submit">Замовити дзвінок</button>
+                <p class="form-terms">Натискаючи на кнопку я погоджуюсь <a class="form-terms-link" href="#">з політикою конфіденційності</a></p>
+            </form>
+             
         </div>
     </div>
     </div>
-    <script src="index.js">const backdrop = document.getElementById("backdrop");
-        const openBtn = document.getElementById("open-modal");
-        const closeBtn = document.getElementById("close-modal");
-
-        openBtn.addEventListener("click", () => {
-            backdrop.classList.add("is-open");
-        });
-
-        closeBtn.addEventListener("click", () => {
-            backdrop.classList.remove("is-open");
-        });</script>
+    <script src="index.js"></script>
 </body>
 </html>
