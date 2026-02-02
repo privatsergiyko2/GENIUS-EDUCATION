@@ -1,0 +1,63 @@
+.formats-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.format-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 444px;
+  padding: 24px;
+  background-image: url(images/P’URI\ 09\ 1.png);
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
+  border-radius: 16px;
+
+  transition: transform 0.3s;
+}
+
+.format-card:hover {
+  transform: scale(1.05);
+}
+
+.formats-list {
+  display: flex;
+  gap: 40px;
+}
+
+.formats-item {
+  flex-basis: 33.3333333333%;
+}
+
+.formats-title {
+  margin-bottom: 80px;
+}
+
+.format-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.format-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-primary-light);
+}
+
+.format-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-primary-light);
+}

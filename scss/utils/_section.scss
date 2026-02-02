@@ -1,0 +1,14 @@
+
+.section-tittle {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.section-tittle.centered {
+  text-align: center;
+}
+
+.section-tittle .accent {
+  color: var(--color-brand-dark);
+}

@@ -1,0 +1,79 @@
+.footer {
+  padding: 32px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-address,
+.footer-nav {
+  flex-basis: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-logo {
+  flex-grow: 1;
+}
+
+.footer-menu {
+  flex-grow: 1;
+}
+
+.address-info,
+.address-list {
+  flex-grow: 1;
+}
+
+.footer-address {
+  display: flex;
+  flex-grow: 1;
+}
+
+.address-link {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.address-link:hover {
+  color: var(--color-brand-light);
+}
+
+.address-copyright {
+  font-size: 13px;
+  color: #a18268;
+}
+
+.footer {
+  position: relative;
+  background-image: url(images/image\ 1564.png);
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer::before {
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 120px;
+  position: absolute;
+  content: "";
+    background-image: url("images/bread-small 2.png");
+}
+
+.footer::after {
+  bottom: 0;
+  background-repeat: no-repeat;
+  width: 380px;
+  height: 190px;
+  right: 0;
+  position: absolute;
+  content: "";
+  background-image: url(images/bread-large\1.png)
+}
